@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Sprouted Roots LBG</title>
+    <style>
+        /* Shared Core Design System Rules */
+        :root { --primary: #1e4620; --secondary: #c98a27; --dark: #2b2b2b; --light: #fdfbf7; --accent: #eaf2eb; --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-sans); line-height: 1.6; color: var(--dark); background-color: var(--light); display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
+        .logo span { color: var(--secondary); }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 4px; }
+        main { flex: 1; }
+        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--secondary); margin: 15px auto 0; }
+        footer { background-color: var(--dark); color: #a0a0a0; padding: 40px 20px; text-align: center; font-size: 0.9rem; margin-top: auto; }
+
+        /* Services Detailed Layout */
+        .services-list { display: flex; flex-direction: column; gap: 40px; }
+        .service-block { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border-left: 6px solid var(--primary); }
+        .service-block h3 { color: var(--primary); font-size: 1.6rem; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .service-block h3 span { font-size: 0.9rem; background-color: var(--accent); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-weight: bold; }
+        .service-block ul { margin-top: 15px; padding-left: 20px; list-style-type: square; }
+        .service-block li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sprouted Roots <span>LBG</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active">Our Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">Core Services & Strategic Expertise</h2>
+            
+            <div class="services-list">
+                
+                <div class="service-block">
+                    <h3>Brand Representation & Program Management <span>Field Leadership</span></h3>
+                    <p>We serve as an authorized local representative for ethical chocolate brands and international development programs. We oversee coordination, field disbursements, key performance monitoring, and stakeholder compliance reporting across rural communities.</p>
+                </div>
+
+                <div class="service-block">
+                    <h3>Cooperative Development & Capacity Building <span>Institutional</span></h3>
+                    <p>We transform individual smallholders into organized commercial forces by setting up structured, transparent governance frameworks within regional cooperatives.</p>
+                    <ul>
+                        <li>Training in operational accountability, open ledger accounting, and administrative compliance.</li>
+                        <li>Proactive gender-inclusion balance modules to integrate female farmers into management roles.</li>
+                        <li>Good Agricultural Practices (GAP) and precise pre and post-harvest protocols.</li>
+                    </ul>
+                </div>
+
+                <div class="service-block">
+                    <h3>Certification Support & Global Compliance <span>Risk Mitigation</span></h3>
+                    <p>We build Internal Control Systems (ICS) and manage audit preparedness protocols to help smallholder networks capture premium value additions by meeting major international market certifiers:</p>
+                    <ul>
+                        <li><strong>Rainforest Alliance:</strong> Enforcing environmental ecosystem standards and child labor prevention steps.</li>
+                        <li><strong>Fairtrade:</strong> Setting up transparent management rules for the democratic deployment of Fairtrade Premium community funds.</li>
+                        <li><strong>Organic Certifications (EU, USDA, JAS):</strong> Designing absolute conversion timelines and managing field isolation checkpoints to prevent synthetic pesticide chemical drifts.</li>
+                    </ul>
+                </div>
+
+                <div class="service-block">
+                    <h3>Polygon Mapping & Advanced Data Dashboards <span>Digital Agri</span></h3>
+                    <p>We deploy geolocation technologies to provide data metrics that align with strict global trade mandates (including EUDR requirements).</p>
+                    <ul>
+                        <li><strong>Polygon boundary mapping:</strong> Physical perimeter tracking of smallholder plots to prove deforest-free farm assets.</li>
+                        <li>Real-time database tracking networks to run impact baseline, risk mapping, and yield estimations.</li>
+                        <li>Cooperative dashboards offering analytical governance reports directly to executive boards.</li>
+                    </ul>
+                </div>
+
+                <div class="service-block">
+                    <h3>Fine Flavour Innovation & Sensory Evaluation <span>Value Addition</span></h3>
+                    <p>We guide local farmers away from unstable bulk raw sales and shift them into premium specialty confectionary segments. We run a dedicated, specialized **Fine Flavour Cocoa Laboratory** where we implement tailored box fermentation timelines, precision dry checks, and detailed organoleptic sensory testing to profile fruit, floral, and nut flavor properties.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sprouted Roots LBG. All Rights Reserved. Located in Ghana.</p>
+    </footer>
+</body>
+</html>
