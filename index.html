@@ -3,116 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprouted Roots LBG | Cultivating Sustainability, Empowering Producers</title>
+    <title>Sprouted Roots LBG | Sustainable Systems Architecture</title>
     <style>
-        /* --- CORE STYLES & DESIGN SYSTEM (Shared Across All Pages) --- */
+        /* --- BRAND DESIGN SYSTEM (Inspired by your new logo & augen.pro) --- */
         :root {
-            --primary: #1e4620;       /* Deep Forest Green */
-            --secondary: #c98a27;     /* Rich Ochre/Gold */
-            --dark: #2b2b2b;          /* Charcoal Black */
-            --light: #fdfbf7;         /* Warm Off-White */
-            --accent: #eaf2eb;        /* Soft Sage Tint */
-            --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --primary: #2d1910;       /* Rich Espresso/Cocoa Dark Brown from your logo text */
+            --accent: #3b7a42;        /* Vibrant Sprout/Leaf Green from your logo */
+            --dark: #2d1910;          /* Matching the primary dark tone for consistent editorial text */
+            --light: #faf9f5;         /* Ultra-Premium Matte Off-White/Cream background */
+            --border: #ebdcd0;        /* Structured grid lines tinted with light cocoa warmth */
+            --font-sans: 'Inter', -apple-system, sans-serif;
+            --font-mono: 'Courier New', Courier, monospace;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: var(--font-sans); line-height: 1.6; color: var(--dark); background-color: var(--light); display: flex; flex-direction: column; min-height: 100vh; }
-        header { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-        .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
-        .logo span { color: var(--secondary); }
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
-        nav a:hover, nav a.active { color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 4px; }
-        main { flex: 1; }
-        section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; position: relative; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--secondary); margin: 15px auto 0; }
-        .btn { display: inline-block; background-color: var(--secondary); color: white; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 4px; transition: transform 0.2s, background-color 0.3s; border: none; cursor: pointer; }
-        .btn:hover { background-color: #b0751e; transform: translateY(-2px); }
-        footer { background-color: var(--dark); color: #a0a0a0; padding: 40px 20px; text-align: center; font-size: 0.9rem; margin-top: auto; }
-        footer p { margin-bottom: 10px; }
 
-        /* --- PAGE SPECIFIC STYLES --- */
-        .hero { background: linear-gradient(rgba(30, 70, 32, 0.85), rgba(30, 70, 32, 0.95)), url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&q=80&w=1500') no-repeat center center/cover; color: #ffffff; padding: 140px 20px; text-align: center; max-width: 100%; }
-        .hero-content { max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.2; }
-        .hero p { font-size: 1.25rem; margin-bottom: 35px; color: var(--accent); }
-        .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .vision-mission { background-color: var(--accent); padding: 40px; border-left: 5px solid var(--primary); border-radius: 0 8px 8px 0; }
-        .vision-mission h3 { color: var(--primary); margin: 20px 0 10px; }
-        .vision-mission h3:first-child { margin-top: 0; }
-        .partners-section { background-color: var(--accent); max-width: 100%; text-align: center; }
-        .partner-tags { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        .tag { background-color: #ffffff; color: var(--primary); padding: 10px 20px; font-weight: 600; border-radius: 50px; border: 1px solid rgba(0,0,0,0.05); font-size: 0.9rem; }
-        @media (max-width: 768px) { .nav-container { flex-direction: column; gap: 15px; } .hero h1 { font-size: 2rem; } .intro-grid { grid-template-columns: 1fr; } }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- IMMERSIVE LAYOUT STRIPES --- */
+        header {
+            border-bottom: 1px solid var(--border);
+            background-color: var(--light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .logo-container img {
+            height: 38px;             /* Perfectly scales your new horizontal logo text */
+            width: auto;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        /* --- THE EDITORIAL HERO SECTION --- */
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 40px;
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+        }
+
+        .hero-left h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -1px;
+            margin-bottom: 40px;
+        }
+
+        /* Highlights a specific key term in your Sprout Green tone */
+        .hero-left h1 span {
+            color: var(--accent);
+        }
+
+        .hero-left p {
+            font-size: 1.3rem;
+            color: #5a4b44;
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        .meta-tag {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .btn-editorial {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            font-family: var(--font-mono);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid var(--primary);
+            padding: 12px 24px;
+            transition: all 0.3s;
+        }
+
+        .btn-editorial:hover {
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        /* The graphic right-hand panel utilizing your new cocoa color footprint */
+        .hero-right-graphic {
+            border: 1px solid var(--border);
+            /* Soft, sophisticated tint mixed from your brand dark espresso and green leaf highlights */
+            background: linear-gradient(rgba(45, 25, 16, 0.4), rgba(45, 25, 16, 0.85)), url('hero-cover.jpg') no-repeat center center/cover;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+            color: #ffffff;
+        }
+
+        .code-bracket {
+            font-family: var(--font-mono);
+            color: #ebdcd0;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* --- STRUCTURED DATA ROWS --- */
+        .editorial-row {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 0.4fr 1.6fr;
+            gap: 40px;
+        }
+
+        .row-num {
+            font-family: var(--font-mono);
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .row-body h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        /* --- ECOSYSTEM NETWORK TAGS --- */
+        .partners-marquee {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .partner-pill {
+            border: 1px solid var(--border);
+            background: #ffffff;
+            color: var(--primary);
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        /* --- FOOTER SECTION --- */
+        footer {
+            border-top: 1px solid var(--border);
+            background-color: var(--light);
+            padding: 60px 40px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: #8c7b73;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 968px) {
+            .hero, .editorial-row, .split-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-left h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">Sprouted Roots <span>LBG</span></a>
+            <!-- Points automatically to your uploaded logo image -->
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="Sprouted Roots LBG Logo">
+            </a>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Our Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="active">Overview</a></li>
+                    <li><a href="about.html">Organization</a></li>
+                    <li><a href="services.html">Sectors</a></li>
+                    <li><a href="contact.html">Connect</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- PROFILE HERO -->
         <section class="hero">
-            <div class="hero-content">
-                <h1>Cultivating Sustainability, Empowering Producers</h1>
-                <p>Advancing inclusive, transparent, and resilient agricultural value chains across Ghana's cocoa sector and beyond.</p>
-                <a href="services.html" class="btn">Explore Our Services</a>
+            <div class="hero-left">
+                <span class="meta-tag">Operational Model // 0.0</span>
+                <h1>Cultivating Sustainability, Empowering <span>Producers.</span></h1>
+                <p>We build technical value chains across West Africa, bridging the gap between smallholder cooperatives and global ethical sourcing requirements.</p>
+                <a href="services.html" class="btn-editorial">System Infrastructure ➔</a>
+            </div>
+            <div class="hero-right-graphic">
+                <div class="code-bracket">[ CORE ARCHITECTURE ]</div>
+                <div style="font-size: 2.3rem; font-weight: 300; line-height: 1.2; letter-spacing: -0.5px;">
+                    Where local accountability meets global supply expectations.
+                </div>
+                <div class="code-bracket">LOC // GHANA, WEST AFRICA</div>
             </div>
         </section>
 
-        <section>
-            <div class="intro-grid">
-                <div>
-                    <h2 style="color: var(--primary); margin-bottom: 20px;">Transforming Agriculture from the Roots Up</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 20px;">
-                        Based in Ghana, <strong>Sprouted Roots LBG</strong> is a non-governmental organization dedicated to cultivating inclusive and sustainable agricultural value chains. 
-                    </p>
-                    <p>
-                        We act as a critical local strategic partner to ethical chocolate brands, producer cooperatives, and international sustainability initiatives. By fostering strong producer-consumer connections, advancing cooperative systems, and enhancing product quality, we promote market access and environmental integrity.
-                    </p>
-                </div>
-                <div class="vision-mission">
-                    <h3>Our Vision</h3>
-                    <p>To be a leading catalyst for sustainable and inclusive value chain development in West Africa, where producers thrive, markets are fair, and agriculture sustains people and the planet.</p>
-                    <h3>Our Mission</h3>
-                    <p>To strengthen cooperative systems, support ethical sourcing, and build resilient agricultural communities through market linkages, certification, and value chain innovation.</p>
+        <!-- INTRO ROW -->
+        <section class="editorial-row">
+            <div class="row-num">0.1 // Mandate</div>
+            <div class="row-body">
+                <h2>Strengthening local systems, optimizing chain dynamics.</h2>
+                <div class="split-grid">
+                    <div>
+                        <p style="margin-bottom: 20px; font-size: 1.05rem; color: #4a3830;">Sprouted Roots LBG operates as a dedicated non-governmental strategic body in Ghana. We implement capacity upgrades directly within ethical chocolate production frameworks and independent farmer cooperatives.</p>
+                        <p>By pairing community trust with spatial mapping verification and rigorous quality control protocols, we turn environmental compliance into immediate local market value.</p>
+                    </div>
+                    <div style="border-left: 1px solid var(--border); padding-left: 40px;">
+                        <span class="meta-tag" style="margin-bottom: 10px;">The Core Vision</span>
+                        <p style="font-style: italic; color: var(--accent); font-size: 1.1rem; margin-bottom: 20px; font-weight: 500;">"A fair, climate-smart West African agricultural market where producers thrive, value is traceable, and landscapes remain resilient."</p>
+                        <span class="meta-tag" style="margin-bottom: 10px;">Intervention Nodes</span>
+                        <p style="font-size: 0.9rem; font-family: var(--font-mono); color: #5a4b44;">[ 01 ] Polygon Boundary Audits<br>[ 02 ] Fine Flavour Lab Logistics<br>[ 03 ] Multi-Standard Certification</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="partners-section">
-            <h2 class="section-title">Key Partners & Collaborations</h2>
-            <div class="partner-tags">
-                <div class="tag">Tony’s Chocolonely (TOC)</div>
-                <div class="tag">TCHO Chocolate</div>
-                <div class="tag">Guittard Chocolate Company</div>
-                <div class="tag">Cocoa Research Institute of Ghana (CRIG)</div>
-                <div class="tag">COCOBOD</div>
-                <div class="tag">Rainforest Alliance</div>
-                <div class="tag">Fairtrade Africa</div>
-                <div class="tag">International Cocoa Initiative (ICI)</div>
-                <div class="tag">Agriterra</div>
-                <div class="tag">Climate 42</div>
-                <div class="tag">Offinso Fine Flavour Cocoa Cooperative</div>
-                <div class="tag">Akyemansa Fine Flavour Cocoa Cooperative</div>
+        <!-- SECTOR ECOSYSTEMS ROW -->
+        <section class="editorial-row">
+            <div class="row-num">0.2 // Collaborations</div>
+            <div class="row-body">
+                <h2>Integrated Network Matrix</h2>
+                <p style="color: #5a4b44;">We partner actively with international brands, scientific institutes, and regulatory authorities to deliver robust value chain operations.</p>
+                <div class="partners-marquee">
+                    <div class="partner-pill">Tony’s Chocolonely (TOC)</div>
+                    <div class="partner-pill">TCHO Chocolate</div>
+                    <div class="partner-pill">Guittard Chocolate Company</div>
+                    <div class="partner-pill">COCOBOD</div>
+                    <div class="partner-pill">Cocoa Research Institute of Ghana (CRIG)</div>
+                    <div class="partner-pill">Rainforest Alliance</div>
+                    <div class="partner-pill">Fairtrade Africa</div>
+                    <div class="partner-pill">International Cocoa Initiative (ICI)</div>
+                    <div class="partner-pill">Agriterra</div>
+                    <div class="partner-pill">Climate 42</div>
+                    <div class="partner-pill">Offinso Fine Flavour Cooperative</div>
+                    <div class="partner-pill">Akyemansa Fine Flavour Cooperative</div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Sprouted Roots LBG. All Rights Reserved. Located in Ghana.</p>
-        <p style="font-size: 0.8rem; color: #666;">Empowering Communities | Advancing Agriculture | Protecting Ecosystems</p>
+        <div class="footer-container">
+            <div>© 2026 SPROUTED ROOTS LBG. CORPORATE RECOGNITION REG // GHANA</div>
+            <div>[ COGNITIVE AGRI ENGINE ]</div>
+        </div>
     </footer>
+
 </body>
 </html>
